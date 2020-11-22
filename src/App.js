@@ -99,7 +99,7 @@ const reducer = (state, action) => {
         }
       }
 
-      case 'addCampaignTags':
+    case 'addCampaignTags':
       return {
         ...state,
         campaigns: {
@@ -114,7 +114,8 @@ const reducer = (state, action) => {
       return {
         ...state,
         draftCampaign: action.payload.campaign,
-    }
+      }
+
     case 'createNewCampaign':
       return {
         ...state,

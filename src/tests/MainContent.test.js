@@ -11,3 +11,10 @@ it('should render correctly with no props', () => {
   const component = shallow(<MainContent />);
   expect(component).toMatchSnapshot();
 });
+
+it("displays a link tag with the Login text", () => {
+  const component = shallow(<MainContent />);
+  let link = component.find("Link").find({ to: "campaign/create/6" });
+
+  expect(link.html()).toBe('<a>Create Campaign</a>');
+});
