@@ -1,0 +1,12 @@
+#information-email-row {
+  width: 100%;
+}
+
+#information-email-row button {
+  float: right;
+}
+
+#information-email-row {
+  display: flex;
+  justify-content: space-between;
+}

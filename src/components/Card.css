@@ -1,0 +1,34 @@
+.card-img {
+    object-fit: cover;
+    height: 100px;
+}
+
+#segments-container {
+    border: none;
+    padding: 10px 0px;
+}
+
+#main-container {
+    height: 100%; 
+    width:100%; 
+    border-collapse: collapse; 
+}
+
+#card-text {
+    display: flex;
+    padding-top: 1rem;
+}
+
+#card-text div {
+    padding-right: 2rem;
+}
+
+#CardExpanded-Container {
+    width: 26rem;
+    margin: 1rem;
+}
+
+#card-container {
+    width: 18rem;
+    margin: 1rem;
+}

@@ -1,0 +1,74 @@
+#phone-container {
+    position: absolute;
+    top: 10%;
+    left: 500px;
+}
+
+#phone-container-placeholder {
+    height: 455px;
+}
+
+#phone-content-media-img {
+    max-width: 130px;
+    max-height: 210px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#phone-content-body img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#phone-content-container {
+    position: relative;
+    top: 13px;
+    left: 15px;
+    height: 424px;
+    width: 195px;
+    padding: 25px 10px 10px;
+    overflow: auto;
+    background-color: #fff;
+}
+
+#phone-content-message {
+    padding: 6px 8px 7px;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#phone-content-contact, #phone-content-message {
+    display: inline-block;
+    max-width: 158px;
+    border-radius: 10px;
+    line-height: 1.35em;
+    font-size: 10px;
+    background-color: #dee2e6;
+}
+
+#phone-content-header {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+#phone-outline {
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.text-medium {
+    color: #adb5bd;
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    .col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
