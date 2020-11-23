@@ -9,13 +9,35 @@
     }
   };
 
-  // Add/edit a media link in campaign to attach a picture or GIF to the message.
+  // Change name in campaign
+  export const updateName = (campaignId, name) => {
+    return {
+      type: 'changeCampaignName',
+      payload: {
+        campaignId,
+        name,
+      },
+    }
+  };
+  
+  // Add/edit a media link in draft campaign to attach a picture or GIF to the message.
   export const updateDraftMediaLink = (campaignId, media) => {
     return {
       type: 'addDraftMediaLink',
       payload: {
         campaignId,
         media,
+      },
+    }
+  };
+
+  // Add/edit a name in a draft campaign.
+  export const updateDraftName = (campaignId, name) => {
+    return {
+      type: 'addDraftTitle',
+      payload: {
+        campaignId,
+        name,
       },
     }
   };

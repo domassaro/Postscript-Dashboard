@@ -1,11 +1,7 @@
 #phone-container {
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 500px;
-}
-
-#phone-container-placeholder {
-    height: 455px;
 }
 
 #phone-content-media-img {

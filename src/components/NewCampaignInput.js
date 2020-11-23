@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { PageContxt } from '../App';
 import Form from 'react-bootstrap/Form';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -6,13 +6,17 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { withRouter } from 'react-router';
 import Button from 'react-bootstrap/Button'
 import { useHistory } from "react-router-dom";
-import { updateDraftText, updateDraftSegment, addDraftTags, updateDraftMediaLink, createNewCampaign } from '../actions';
+import { updateDraftText, updateDraftName, addDraftTags, updateDraftMediaLink, createNewCampaign } from '../actions';
 import "./InformationForm.css";
 
 function NewCampaignInput(props) {
   const { campaign } = props;
   const { state, dispatch }  = useContext(PageContxt);
   let history = useHistory();
+
+  const handleUpdateName = (campaignId, name) => {
+    dispatch(updateDraftName(campaignId, name))
+  }
 
   const handleUpdateMediaLink = (campaignId, media) => {
     dispatch(updateDraftMediaLink(campaignId, media))
@@ -36,7 +40,13 @@ function NewCampaignInput(props) {
   return (
     <>
       <Form>
-        <Form.Group controlId={`formBasicEmail_1`}>
+        <Form.Group key={`formBasicEmail_${state.draftCampaign.id}`}>
+          <Form.Control 
+            type="email"
+            value={state.draftCampaign.name}
+            onChange={e => {handleUpdateName(state.draftCampaign.id, e.target.value);}}
+            id="name-input"
+          />
           <Form.Label id="information-email-row">
             Text
           {/* Created campaigns can use tags to replace parts of the message with variables. */}

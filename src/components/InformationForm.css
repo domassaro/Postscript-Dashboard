@@ -6,6 +6,10 @@
   float: right;
 }
 
+#name-input {
+  margin-bottom: 1rem;
+}
+
 #information-email-row {
   display: flex;
   justify-content: space-between;

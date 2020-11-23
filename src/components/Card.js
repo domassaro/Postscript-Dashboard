@@ -47,7 +47,10 @@ function CardContainer(props) {
                 <h6>Target Segments</h6>
                 <SegmentsDropdown campaign={campaign} segments={state.segments} />
               </Card>
-              <Link to={`/campaigns/${campaign.id}`} variant="primary">Edit</Link>          
+              {/* Can only edit preview campaigns */}
+              {!sentCampaigns &&
+                <Link to={`/campaigns/${campaign.id}`} variant="primary">Edit</Link>
+              }       
             </td> 
           </tr> 
         </tbody>

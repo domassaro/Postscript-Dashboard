@@ -14,6 +14,7 @@ import '../src/styles/App.css';
 import {
   BrowserRouter as Router,
   Route,
+  Redirect
 } from "react-router-dom";
 
 export const PageContxt = React.createContext();
@@ -36,6 +37,15 @@ const reducer = (state, action) => {
         }
       }
 
+    case 'addDraftTitle':
+      return {
+        ...state,
+        draftCampaign: {
+            ...state.draftCampaign,
+            name: action.payload.name,
+        }
+      }
+
     case 'addMediaLink':
       return {
         ...state,
@@ -44,6 +54,18 @@ const reducer = (state, action) => {
           [action.payload.campaignId]: {
             ...state.campaigns[action.payload.campaignId],
             media: action.payload.media,
+          }
+        }
+      }
+
+    case 'changeCampaignName':
+      return {
+        ...state,
+        campaigns: {
+          ...state.campaigns,
+          [action.payload.campaignId]: {
+            ...state.campaigns[action.payload.campaignId],
+            name: action.payload.name,
           }
         }
       }
@@ -159,6 +181,15 @@ function App() {
   return (
     <PageContxt.Provider value={{ state, dispatch }}>
       <Router>
+        <Route
+          exact
+          path="/"
+          render={() => {
+              return (
+                  <Redirect to="/home" />
+              )
+          }}
+        />
         <NavbarHeader />
         <Container fluid>
           <Row className="flex-nowrap equal row">

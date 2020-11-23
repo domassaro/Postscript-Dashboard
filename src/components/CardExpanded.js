@@ -26,7 +26,7 @@ function CardExpanded(props) {
       render different components */}
       {!!isNewCampaign &&
         <>
-        <NewCampaignInput campaign={campaign}/>
+          <NewCampaignInput campaign={campaign}/>
           {/* Select a target segment for campaign */}
           <div id="segments-container">
             <h6>Segments</h6>
