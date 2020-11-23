@@ -5,14 +5,23 @@ To get inspiration, I referenced the Postscript dashboard and expanded upon the 
 
 # User Stories
 ✔️ I can view a list of my Preview (unsent) campaigns and their target segments.
+
 ✔️ I can view a list of my Sent campaigns and their performance stats (amount sent, click through rates).
+
 ✔️ I can create a new campaign or edit a Preview campaign.
+
 ✔️ There is a live preview of my campaign as I edit it.
+
 ✔️ I can add/edit a media link in my campaign to attach a picture or GIF to the message.
+
 ✔️ My created campaign can use tags to replace parts of the message with variables.
+
 ✔️ Tags required for this demo are {shop_link}, {first_name}, and {shop_name}
+
 ✔️ Select a target segment for campaign
+
 ✔️ You may add support for additional tags (custom links, personalized offers, etc.)!
+
 
 ## Available Scripts
 
